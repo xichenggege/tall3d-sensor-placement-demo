@@ -118,7 +118,7 @@ if if_solve_oversample_sensor
     numSensors = 44;   % same number of TALL-3D axis-symmetry domain !
     X = T.u(:,1:numSensors)*T.u(:,1:numSensors)';   
     constraints_type   = 'region-constraints';
-    constraints_radius = 10e-3;
+    constraints_radius = 8e-3;
     
     [~,~,sensors{3}]   = qr_pivote_udf(X,constraints_type,@constraints_fun,X_(:),Y_(:),constraints_radius,numSensors);
     optSensors{3}      = sensors{3}(1:numSensors);
